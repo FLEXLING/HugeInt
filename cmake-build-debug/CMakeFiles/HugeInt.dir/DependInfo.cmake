@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/HUGE/CLionProjects/HugeInt/main.cpp" "C:/Users/HUGE/CLionProjects/HugeInt/cmake-build-debug/CMakeFiles/HugeInt.dir/main.cpp.obj"
+  "C:/Users/VROOM/Documents/GitHub/HugeInt/main.cpp" "C:/Users/VROOM/Documents/GitHub/HugeInt/cmake-build-debug/CMakeFiles/HugeInt.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
