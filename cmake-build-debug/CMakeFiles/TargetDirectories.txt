@@ -1,3 +1,3 @@
-C:/Users/VROOM/Documents/GitHub/HugeInt/cmake-build-debug/CMakeFiles/HugeInt.dir
-C:/Users/VROOM/Documents/GitHub/HugeInt/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/VROOM/Documents/GitHub/HugeInt/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/HUGE/CLionProjects/HugeInt/cmake-build-debug/CMakeFiles/HugeInt.dir
+C:/Users/HUGE/CLionProjects/HugeInt/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/HUGE/CLionProjects/HugeInt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

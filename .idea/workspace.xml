@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dd4a3fc-6ab5-4cc6-af43-e5fb2069247a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CMakeCCompiler.cmake" afterDir="false" />
@@ -24,10 +23,14 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/a.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/HugeInt.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
@@ -35,6 +38,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/HugeInt.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/HugeInt.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/HugeInt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/HugeInt.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -48,6 +52,7 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+    <option name="clangWarnings" value="-Wno-unused-variable,-Werror=implicit-function-declaration,-Wshadow,-Wno-shadow-field-in-constructor-modified,-Wno-shadow-ivar,-Wno-return-stack-address" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
@@ -60,38 +65,79 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="369" lean-forward="true" selection-start-line="369" selection-end-line="369" />
+            <state relative-caret-position="275">
+              <caret line="918" column="18" lean-forward="true" selection-start-line="918" selection-start-column="18" selection-end-line="918" selection-end-column="18" />
               <folding>
-                <element signature="e#144#162#0" expanded="true" />
+                <element signature="e#0#143#0" />
+                <element signature="e#3329#5448#0" />
+                <element signature="e#5922#5970#0" />
+                <element signature="e#5972#6153#0" />
+                <element signature="e#6155#6363#0" />
+                <element signature="e#6365#6476#0" />
+                <element signature="e#6478#6822#0" />
+                <element signature="e#6824#7057#0" />
+                <element signature="e#7059#7267#0" />
+                <element signature="e#7269#8015#0" />
+                <element signature="e#8017#8738#0" />
+                <element signature="e#8740#8899#0" />
+                <element signature="e#8901#9049#0" />
+                <element signature="e#9051#9199#0" />
+                <element signature="e#9201#9349#0" />
+                <element signature="e#9351#9499#0" />
+                <element signature="e#9501#10805#0" />
+                <element signature="e#10807#12418#0" />
+                <element signature="e#14359#14540#0" />
+                <element signature="e#14868#14945#0" />
+                <element signature="e#14947#15271#0" />
+                <element signature="e#15273#15350#0" />
+                <element signature="e#15352#15566#0" />
+                <element signature="e#15568#15782#0" />
+                <element signature="e#15784#15890#0" />
+                <element signature="e#15892#15985#0" />
+                <element signature="e#15987#16080#0" />
+                <element signature="e#16082#16175#0" />
+                <element signature="e#16177#16270#0" />
+                <element signature="e#16272#16362#0" />
+                <element signature="e#16364#16456#0" />
+                <element signature="e#16458#16549#0" />
+                <element signature="e#16551#16643#0" />
+                <element signature="e#16739#16831#0" />
+                <element signature="e#16833#16936#0" />
+                <element signature="e#16938#17029#0" />
+                <element signature="e#17031#17122#0" />
+                <element signature="e#17124#17215#0" />
+                <element signature="e#17217#17308#0" />
+                <element signature="e#17310#17398#0" />
+                <element signature="e#17400#17490#0" />
+                <element signature="e#17492#17580#0" />
+                <element signature="e#17582#17672#0" />
+                <element signature="e#17674#17764#0" />
+                <element signature="e#17766#17856#0" />
+                <element signature="e#17858#17972#0" />
+                <element signature="e#17974#18075#0" />
+                <element signature="e#18077#18178#0" />
+                <element signature="e#18180#18281#0" />
+                <element signature="e#18283#18384#0" />
+                <element signature="e#18386#18484#0" />
+                <element signature="e#18486#18586#0" />
+                <element signature="e#18588#18686#0" />
+                <element signature="e#18688#18788#0" />
+                <element signature="e#18790#18890#0" />
+                <element signature="e#18892#18992#0" />
+                <element signature="e#18994#19105#0" />
+                <element signature="e#19107#19206#0" />
+                <element signature="e#19208#19307#0" />
+                <element signature="e#19309#19408#0" />
+                <element signature="e#19410#19509#0" />
+                <element signature="e#19511#19607#0" />
+                <element signature="e#19609#19707#0" />
+                <element signature="e#19709#19805#0" />
+                <element signature="e#19807#19905#0" />
+                <element signature="e#19907#20005#0" />
+                <element signature="e#20007#20105#0" />
+                <element signature="e#20106#20306#0" />
+                <element signature="e#20308#20440#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="229" selection-start-line="229" selection-end-line="229" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/bits/basic_string.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="2539" selection-start-line="2539" selection-end-line="2539" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/bits/stl_vector.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="914" selection-start-line="914" selection-end-line="914" />
             </state>
           </provider>
         </entry>
@@ -104,9 +150,17 @@
       <find>long long int</find>
       <find>operator</find>
       <find>HugeInt::</find>
-      <find>item</find>
-      <find>item</find>
       <find>num</find>
+      <find>item</find>
+      <find>this-&gt;</find>
+      <find>temp.</find>
+      <find>item.</find>
+      <find>temp</find>
+      <find>i</find>
+      <find>HugeInt &amp;caller,long long int item</find>
+      <find>HugeInt &amp;caller,string item</find>
+      <find>long long int item</find>
+      <find>long long</find>
     </findStrings>
     <replaceStrings>
       <replace>bool</replace>
@@ -114,6 +168,17 @@
       <replace>HugeInt::operator</replace>
       <replace>;</replace>
       <replace>num</replace>
+      <replace>temp.</replace>
+      <replace>temp1.</replace>
+      <replace>temp2.</replace>
+      <replace>gapMultiple</replace>
+      <replace>k</replace>
+      <replace>long long int,HugeInt &amp;caller</replace>
+      <replace>long long int item,HugeInt &amp;caller</replace>
+      <replace>string,HugeInt &amp;caller</replace>
+      <replace>string item,HugeInt &amp;caller</replace>
+      <replace>string item</replace>
+      <replace>long</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -126,20 +191,17 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1592" />
-    <option name="y" value="-742" />
-    <option name="width" value="1096" />
-    <option name="height" value="1896" />
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -187,32 +249,37 @@
       <workItem from="1558610685877" duration="1358000" />
       <workItem from="1558680737450" duration="3999000" />
       <workItem from="1558768832043" duration="18777000" />
+      <workItem from="1558856816983" duration="1267000" />
+      <workItem from="1558862597510" duration="30886000" />
+      <workItem from="1559029894546" duration="7851000" />
+      <workItem from="1559116170807" duration="11130000" />
+      <workItem from="1559228926565" duration="25472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26806000" />
+    <option name="totallyTimeSpent" value="103412000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1592" y="-742" width="1096" height="1896" extended-state="6" />
+    <frame x="-8" y="-8" width="1723" height="935" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17953669" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.14834835" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32973894" />
+      <window_info active="true" id="Debug" order="3" visible="true" weight="0.24924925" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39954597" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="CMake" order="11" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="CMake" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32917705" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -227,43 +294,107 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>590</line>
-          <option name="timeStamp" value="4" />
+          <line>921</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/bits/basic_string.h" />
+    <entry file="file://D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h" />
+    <entry file="file://D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/bits/stl_vector.h" />
+    <entry file="file://C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/cmath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9156">
+          <caret line="436" selection-start-line="436" selection-end-line="436" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/bits/stl_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5376">
+          <caret line="256" selection-start-line="256" selection-end-line="256" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/bits/basic_string.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="2539" selection-start-line="2539" selection-end-line="2539" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include/stdio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="229" selection-start-line="229" selection-end-line="229" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="914" selection-start-line="914" selection-end-line="914" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="369" lean-forward="true" selection-start-line="369" selection-end-line="369" />
+        <state relative-caret-position="275">
+          <caret line="918" column="18" lean-forward="true" selection-start-line="918" selection-start-column="18" selection-end-line="918" selection-end-column="18" />
           <folding>
-            <element signature="e#144#162#0" expanded="true" />
+            <element signature="e#0#143#0" />
+            <element signature="e#3329#5448#0" />
+            <element signature="e#5922#5970#0" />
+            <element signature="e#5972#6153#0" />
+            <element signature="e#6155#6363#0" />
+            <element signature="e#6365#6476#0" />
+            <element signature="e#6478#6822#0" />
+            <element signature="e#6824#7057#0" />
+            <element signature="e#7059#7267#0" />
+            <element signature="e#7269#8015#0" />
+            <element signature="e#8017#8738#0" />
+            <element signature="e#8740#8899#0" />
+            <element signature="e#8901#9049#0" />
+            <element signature="e#9051#9199#0" />
+            <element signature="e#9201#9349#0" />
+            <element signature="e#9351#9499#0" />
+            <element signature="e#9501#10805#0" />
+            <element signature="e#10807#12418#0" />
+            <element signature="e#14359#14540#0" />
+            <element signature="e#14868#14945#0" />
+            <element signature="e#14947#15271#0" />
+            <element signature="e#15273#15350#0" />
+            <element signature="e#15352#15566#0" />
+            <element signature="e#15568#15782#0" />
+            <element signature="e#15784#15890#0" />
+            <element signature="e#15892#15985#0" />
+            <element signature="e#15987#16080#0" />
+            <element signature="e#16082#16175#0" />
+            <element signature="e#16177#16270#0" />
+            <element signature="e#16272#16362#0" />
+            <element signature="e#16364#16456#0" />
+            <element signature="e#16458#16549#0" />
+            <element signature="e#16551#16643#0" />
+            <element signature="e#16739#16831#0" />
+            <element signature="e#16833#16936#0" />
+            <element signature="e#16938#17029#0" />
+            <element signature="e#17031#17122#0" />
+            <element signature="e#17124#17215#0" />
+            <element signature="e#17217#17308#0" />
+            <element signature="e#17310#17398#0" />
+            <element signature="e#17400#17490#0" />
+            <element signature="e#17492#17580#0" />
+            <element signature="e#17582#17672#0" />
+            <element signature="e#17674#17764#0" />
+            <element signature="e#17766#17856#0" />
+            <element signature="e#17858#17972#0" />
+            <element signature="e#17974#18075#0" />
+            <element signature="e#18077#18178#0" />
+            <element signature="e#18180#18281#0" />
+            <element signature="e#18283#18384#0" />
+            <element signature="e#18386#18484#0" />
+            <element signature="e#18486#18586#0" />
+            <element signature="e#18588#18686#0" />
+            <element signature="e#18688#18788#0" />
+            <element signature="e#18790#18890#0" />
+            <element signature="e#18892#18992#0" />
+            <element signature="e#18994#19105#0" />
+            <element signature="e#19107#19206#0" />
+            <element signature="e#19208#19307#0" />
+            <element signature="e#19309#19408#0" />
+            <element signature="e#19410#19509#0" />
+            <element signature="e#19511#19607#0" />
+            <element signature="e#19609#19707#0" />
+            <element signature="e#19709#19805#0" />
+            <element signature="e#19807#19905#0" />
+            <element signature="e#19907#20005#0" />
+            <element signature="e#20007#20105#0" />
+            <element signature="e#20106#20306#0" />
+            <element signature="e#20308#20440#0" />
           </folding>
         </state>
       </provider>
