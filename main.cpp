@@ -38,6 +38,7 @@ public:
     HugeInt& operator=(string);
     friend istream &operator>>(istream &,HugeInt &);
     friend ostream &operator<<(ostream &,HugeInt &);
+    HugeInt operator-();
     HugeInt operator++(int);
     HugeInt &operator++();
     HugeInt operator--(int);
@@ -137,15 +138,15 @@ HugeInt::HugeInt(string num){
     if(num[num.size()-1]=='L'){
         num=num.substr(0,num.size()-1);
     }
-    for(int i=0;i<num.size();i++){
-        if(!isdigit(num[i])){
-            isWrong=1;
-        }
-    }
 
-    if(isWrong==0){
-        int end=num.length();
-        if(type==0){
+    int end=num.length();
+    if(type==0){
+        for(int i=0;i<num.size();i++){
+            if(!isdigit(num[i])){
+                isWrong=1;
+            }
+        }
+        if(isWrong==0){
             while(1){
                 if(end-8<=0){
                     int temp;
@@ -158,38 +159,55 @@ HugeInt::HugeInt(string num){
                 nums.push_back(temp);
                 end-=8;
             }
-        }else if(type==1){
-            while(1){
-                if(end-8<=0){
-                    int temp;
-                    sscanf(num.substr(0,end).c_str(),"%o",&temp);
-                    nums.push_back(temp);
-                    break;
-                }
-                int temp;
-                sscanf(num.substr(end-8,8).c_str(),"%o",&temp);
-                nums.push_back(temp);
-                end-=8;
-            }
-        }else if(type==2){
-            while(1){
-                if(end-8<=0){
-                    int temp;
-                    sscanf(num.substr(0,end).c_str(),"%x",&temp);
-                    nums.push_back(temp);
-                    break;
-                }
-                int temp;
-                sscanf(num.substr(end-8,8).c_str(),"%x",&temp);
-                nums.push_back(temp);
-                end-=8;
+        }else{
+            HugeInt();
+        }
+    }else if(type==1){
+        for(int i=0;i<num.size();i++){
+            if(num[i]-48>7||!isdigit(num[i])){
+                isWrong=1;
             }
         }
-        if(isMinus==1){
-            this->isMinus=1;
+        if(isWrong==0){
+            int size=num.size()-1;
+            int i=0;
+            HugeInt temp=0;
+            while(i<=size){
+                temp=temp+(num[size-i]-48)*pow(8,i);
+                i++;
+            }
+            this->nums=temp.nums;
+        }else{
+            HugeInt();
         }
-    }else{
-        HugeInt();
+    }else if(type==2){
+        for(int i=0;i<num.size();i++){
+            if(!(isdigit(num[i])||(num[i]>64&&num[i]<71)||(num[i]>96&&num[i]<103))){
+                isWrong=1;
+            }
+        }
+        if(isWrong==0){
+            int size=num.size()-1;
+            int i=0;
+            HugeInt temp=0;
+            while(i<=size){
+                int debug=num[size-i]-48;
+                if(isdigit(num[size-i])){
+                    temp=temp+(num[size-i]-48)*pow(16,i);
+                }else if(num[size-i]>64&&num[size-i]<71){
+                    temp+=(num[size-i]-55)*pow(16,i);
+                }else if(num[size-i]>96&&num[size-i]<103){
+                    temp+=(num[size-i]-87)*pow(16,i);
+                }
+                i++;
+            }
+            this->nums=temp.nums;
+        }else{
+            HugeInt();
+        }
+    }
+    if(isMinus==1){
+        this->isMinus=1;
     }
 }
 
@@ -263,6 +281,11 @@ ostream &operator<<(ostream &out,HugeInt &item){
     }
 
     return out;
+}
+
+HugeInt HugeInt::operator-(){
+    this->isMinus*=-1;
+    return *this;
 }
 
 HugeInt HugeInt::operator++(int){
@@ -584,6 +607,11 @@ HugeInt HugeInt::operator%(HugeInt item){
 
 bool HugeInt::operator>(HugeInt item){
     bool is=0;
+    if(this->isMinus!=1&&item.isMinus==1){
+        return 1;
+    }else if(this->isMinus==1&&item.isMinus!=1){
+        return 0;
+    }
     int i=this->nums.size()-1;
     if(this->nums.size()>item.nums.size()){
         is=1;
@@ -600,6 +628,9 @@ bool HugeInt::operator>(HugeInt item){
             }
         }
     }
+    if(this->isMinus==1&&item.isMinus==1){
+        is*=-1;
+    }
     return is;
 }
 
@@ -608,24 +639,8 @@ bool HugeInt::operator>=(HugeInt item){
 }
 
 bool HugeInt::operator<(HugeInt item){
-    bool is=0;
-    int i=this->nums.size()-1;
-    if(this->nums.size()<item.nums.size()){
-        is=1;
-    }else if(this->nums.size()==item.nums.size()){
-        while(i>=0){
-            if(this->nums[i]>item.nums[i]){
-                is=0;
-                break;
-            }else if(this->nums[i]==item.nums[i]){
-                i--;
-            }else{
-                is=1;
-                break;
-            }
-        }
-    }
-    return is;
+    bool is=*this>item;
+    return !is;
 }
 
 bool HugeInt::operator<=(HugeInt item){
@@ -877,6 +892,7 @@ bool operator==(string item,HugeInt &caller){
     HugeInt cover(item);
     return caller==cover;
 }
+
 int cntDig(HugeInt item){
     int cnt=0;
     if(item.getNums().size()==0){
@@ -913,11 +929,43 @@ HugeInt calRemainder(int cnt,HugeInt item,HugeInt caller){
 }
 
 int main(){
-    HugeInt a("44556677223388993212646546846");
-    HugeInt b("12");
-    cout<<a<<endl;
-    cout<<b<<endl;
-    a=a/b;
-    cout<<a<<endl;
+//    HugeInt t1;
+//    cout<<"默认构造："<<t1<<endl;
+//    HugeInt t2(0);
+//    cout<<"用0构造："<<t2<<endl;
+//    HugeInt t3(2141483647L);
+//    cout<<"用long最大值构造："<<t3<<endl;
+//    HugeInt t4(-2147483648L);
+//    cout<<"用long最小值构造："<<t4<<endl;
+//    HugeInt t5(12345678);
+//    cout<<"用正常值构造："<<t5<<endl;
+//    HugeInt t6(-12345678);
+//    cout<<"用负数正常值构造："<<t6<<endl;
+//    HugeInt t7("+12345678");
+//    cout<<"用+12345678字符串构造："<<t7<<endl;
+//    HugeInt t8("-12345678");
+//    cout<<"用-12345678字符串构造："<<t8<<endl;
+//    HugeInt t9("+12345678L");
+//    cout<<"用+12345678L字符串构造："<<t9<<endl;
+//    HugeInt t10("+0X2134L");
+//    cout<<"用十六进制+0X2134L字符串构造："<<t10<<endl;
+//    HugeInt t11("-012345");
+//    cout<<"用八进制-012345字符串构造："<<t11<<endl;
+//    HugeInt t12("+-12345678");
+//    cout<<"用非法字符串+-12345678构造："<<t12<<endl;
+//    HugeInt t13("+-12345678");
+//    cout<<"用非法字符串+-12345678构造："<<t13<<endl;
+//    HugeInt t14("1234asadf5678");
+//    cout<<"用非法字符串1234asadf5678构造："<<t14<<endl;
+//    HugeInt t15("+12345678LL");
+//    cout<<"用非法字符串+12345678LL构造："<<t12<<endl;
+//    HugeInt t12("+-12345678");
+//    cout<<"用非法字符串+-12345678构造："<<t12<<endl;
+//    HugeInt t12("+-12345678");
+//    cout<<"用非法字符串+-12345678构造："<<t12<<endl;
+//    HugeInt t12("+-12345678");
+//    cout<<"用非法字符串+-12345678构造："<<t12<<endl;
+    HugeInt t1("01234567");
+    cout<<t1<<endl;
     return 0;
 }
